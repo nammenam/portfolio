@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerve Studios | Film Production House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .card-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.07);
+        }
+        .card-glow {
+             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold text-gray-900">CineVerve</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">About</a>
+                <a href="#work" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Work</a>
+                <a href="#contact" class="bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded-md transition-all duration-300 hover:scale-105">Get a Quote</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white">
+             <a href="#about" class="block py-2 text-gray-600 hover:text-gray-900">About</a>
+             <a href="#work" class="block py-2 text-gray-600 hover:text-gray-900">Work</a>
+             <a href="#contact" class="block mt-2 bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded-md text-center">Get a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section text-white text-center">
+            <div class="hero-overlay"></div>
+            <video autoplay muted loop playsinline class="video-bg">
+                <!-- Using a placeholder video from Coverr.co -->
+                <source src="https://cdn.coverr.co/videos/coverr-a-director-and-a-cameraman-at-work-4184/1080p.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content px-6">
+                <h1 class="text-4xl md:text-7xl font-bold leading-tight mb-4 tracking-wide">Stories That Resonate</h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 font-light">Award-winning film production for brands, artists, and visionaries.</p>
+                <a href="#work" class="bg-white hover:bg-gray-200 text-black font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 inline-block">View Our Films</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-gray-50 py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">We are CineVerve.</h2>
+                        <p class="text-gray-600 mb-4 font-light leading-relaxed">
+                            A full-service production house dedicated to the art of storytelling. We believe film is a powerful medium to evoke emotion, challenge perspectives, and create lasting impact.
+                        </p>
+                        <p class="text-gray-600 mb-6 font-light leading-relaxed">
+                            Our passionate team of directors, cinematographers, and post-production artists collaborates with brands and creatives to produce compelling content for film, television, and digital platforms.
+                        </p>
+                        <div class="flex space-x-4">
+                           <a href="#" class="text-gray-500 hover:text-black"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                           <a href="#" class="text-gray-500 hover:text-black"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                           <a href="#" class="text-gray-500 hover:text-black"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                       </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <h3 class="text-4xl font-bold text-gray-900">10+</h3>
+                            <p class="text-gray-500">Years in Film</p>
+                        </div>
+                         <div class="text-center">
+                            <h3 class="text-4xl font-bold text-gray-900">50+</h3>
+                            <p class="text-gray-500">Projects Delivered</p>
+                        </div>
+                         <div class="text-center">
+                            <h3 class="text-4xl font-bold text-gray-900">15</h3>
+                            <p class="text-gray-500">Festival Selections</p>
+                        </div>
+                         <div class="text-center">
+                            <h3 class="text-4xl font-bold text-gray-900">8</h3>
+                            <p class="text-gray-500">Awards Won</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Work</h2>
+                    <p class="text-gray-500 mt-2 font-light">A glimpse into our recent productions.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="project-card cursor-pointer" data-title="The Last City" data-description="A dystopian short film exploring themes of hope and survival in a world silenced by an unknown force. 'The Last City' was an official selection at the Phoenix Sci-Fi Film Festival and praised for its stunning cinematography and sound design." data-image="https://images.pexels.com/photos/7234320/pexels-photo-7234320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+                        <div class="relative group overflow-hidden rounded-lg bg-gray-100 card-glow">
+                             <img src="https://images.pexels.com/photos/7234320/pexels-photo-7234320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Short Film Project" class="w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                                <i data-lucide="play-circle" class="w-16 h-16 text-white/70 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+                             </div>
+                        </div>
+                        <div class="pt-4 text-center">
+                            <h3 class="text-xl font-serif font-bold text-gray-900">The Last City</h3>
+                            <p class="text-gray-500 text-sm">Short Film</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Card 2 -->
+                    <div class="project-card cursor-pointer" data-title="Echoes of the Mountain" data-description="This feature documentary follows a team of conservationists working to protect an endangered species in the Andes. We spent three months on location, capturing breathtaking landscapes and intimate moments to tell a powerful story of dedication and the wild." data-image="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+                         <div class="relative group overflow-hidden rounded-lg bg-gray-100 card-glow">
+                             <img src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Documentary Project" class="w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                                <i data-lucide="play-circle" class="w-16 h-16 text-white/70 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+                             </div>
+                        </div>
+                        <div class="pt-4 text-center">
+                            <h3 class="text-xl font-serif font-bold text-gray-900">Echoes of the Mountain</h3>
+                            <p class="text-gray-500 text-sm">Documentary</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                     <div class="project-card cursor-pointer" data-title="Starlight - by 'The Vex'" data-description="A high-energy music video for the breakout single 'Starlight' by indie-rock band The Vex. We utilized practical effects and dynamic camera work to create a visually striking narrative that complements the song's electric feel. Featured on MTV and Vevo." data-image="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+                         <div class="relative group overflow-hidden rounded-lg bg-gray-100 card-glow">
+                             <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Music Video Project" class="w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                                <i data-lucide="play-circle" class="w-16 h-16 text-white/70 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+                             </div>
+                        </div>
+                        <div class="pt-4 text-center">
+                            <h3 class="text-xl font-serif font-bold text-gray-900">Starlight - The Vex</h3>
+                            <p class="text-gray-500 text-sm">Music Video</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-900 py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold">Let's Create Together</h2>
+                <p class="text-gray-300 mt-4 mb-8 max-w-xl mx-auto font-light">Have a story to tell? Let's discuss how we can bring it to the screen.</p>
+                <a href="mailto:contact@cinevervestudios.com" class="bg-white hover:bg-gray-200 text-black font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 inline-block">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white">
+         <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2024 CineVerve Studios. All Rights Reserved.</p>
+         </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div id="modal-content" class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+            <button id="modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-black">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <img id="modal-image" src="" alt="Project Image" class="w-full h-auto object-cover rounded-t-lg">
+            <div class="p-8">
+                <h2 id="modal-title" class="text-3xl font-bold font-serif text-gray-900 mb-4"></h2>
+                <p id="modal-description" class="text-gray-600 font-light leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.querySelector('header');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on nav link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Project Modal Logic
+        const projectCards = document.querySelectorAll('.project-card');
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalCloseButton = document.getElementById('modal-close');
+        
+        const modalImage = document.getElementById('modal-image');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Get data from data attributes
+                const title = card.dataset.title;
+                const description = card.dataset.description;
+                const imageSrc = card.dataset.image;
+
+                // Populate modal
+                modalImage.src = imageSrc;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+
+                // Show modal
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // prevent background scroll
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; // restore scroll
+        };
+
+        modalCloseButton.addEventListener('click', closeModal);
+        
+        modal.addEventListener('click', (e) => {
+            // If the click is on the backdrop (the modal itself), close it
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
