@@ -9,7 +9,7 @@
   pagecount: "true",
   date: datetime.today().display(),
   contacts: (
-    (text: "Alundamveien 36, 0957 Oslo"),    
+    (text: "Vidars gate 20A, 0452 OSLO"),    
     (text: "brage.wis@gmail.com", link: "mailto:brage.wis@gmail.com"),
     (text: "+4790767616"),
     (text: "github/nammenam", link: "https://www.github.com/nammenam"),
